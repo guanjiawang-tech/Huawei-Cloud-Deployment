@@ -22,19 +22,19 @@
 - 默认虚拟私有云（如没有则跳转至附录问题1）
 - 公网带宽选择"按流量计费" 带宽100Mbit
 - 登陆凭证选择密码（一定要记住）
-- ![q](C:\Users\18380\Desktop\q.png)
+- ![1](.\images\1.png)
 
 ### 3. 服务器开机
 
 成功购买服务器后，点击远程登录就可以打开服务器进行后续操作
 
-![2](C:\Users\18380\Desktop\2.png)
+![2](.\images\2.png)
 
 ### 4. 远程连接服务器
 
 ssh root@你的公网IP 如下显示则说明配置成功
 
-![image-20260429114534672](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429114534672.png)
+![image-20260429114534672](.\images\4.png)
 
 ---
 
@@ -91,9 +91,9 @@ mysql_secure_installation
 // 按照下图进行配置，密码一定要是你本地的MySQL密码，否则要改后端配置类！
 ```
 
-![image-20260429120422702](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429120422702.png)
+![image-20260429120422702](.\images\5.png)
 
-![image-20260429120209232](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429120209232.png)
+![image-20260429120209232](.\images\6.png)
 
 ### 开启远程访问
 
@@ -113,7 +113,7 @@ FLUSH PRIVILEGES;
 find / -name my.cnf
 ```
 
-![image-20260429120646919](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429120646919.png)
+![image-20260429120646919](.\images\7.png)
 
 跳转到当前文件夹并进行修改文件让所有路径都可访问
 
@@ -123,7 +123,7 @@ ls
 vim /etc/my.cnf.d/mysql-server.cnf
 ```
 
-![image-20260429120809264](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429120809264.png)
+![image-20260429120809264](.\images\8.png)
 
 ``` 
 添加：（一定要手敲！）
@@ -166,7 +166,7 @@ systemctl restart mysqld
 | 用户名 | root                        |
 | 密码   | 你的MySQL密码               |
 
-![image-20260429121148049](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429121148049.png)
+![image-20260429121148049](.\images\9.png)
 
 接下来就可以进行可视化界面操作后台数据库了，导入成功即可
 
@@ -180,9 +180,9 @@ systemctl restart mysqld
 mvn clean package -DskipTests
 ```
 
-![屏幕截图 2026-04-29 111812](C:\Users\18380\Pictures\Screenshots\屏幕截图 2026-04-29 111812.png)
+![屏幕截图 2026-04-29 111812](.\images\10.png)
 
-![image-20260429121610947](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429121610947.png)
+![image-20260429121610947](.\images\11.png)
 
 上传至服务器：
 scp target/*.jar root@服务器IP:/root/
@@ -191,7 +191,7 @@ scp target/*.jar root@服务器IP:/root/
 scp target/TAP_SpringBoot-0.0.1-SNAPSHOT.jar root@1.92.84.157:/root/
 ```
 
-![image-20260429121831043](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429121831043.png)
+![image-20260429121831043](.\images\12.png)
 
 服务器运行：
 ``` 
@@ -225,7 +225,7 @@ http://你的服务器IP:8080/api
 
 否则上线后：前端连不上后端
 
-![image-20260429123014543](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429123014543.png)
+![image-20260429123014543](.\images\13.png)
 
 ### 1、安装依赖（第一次必须）
 
@@ -255,7 +255,7 @@ build/
 scp -r build root@1.92.84.157:/root/
 ```
 
-![image-20260429123722680](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429123722680.png)
+![image-20260429123722680](.\images\14.png)
 
 ---
 
@@ -307,7 +307,7 @@ systemctl enable nginx
 http://1.92.84.157:5171
 ```
 
-![image-20260429140516173](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429140516173.png)看到页面 = 成功
+![image-20260429140516173](.\images\15.png)看到页面 = 成功
 
 ---
 
@@ -321,7 +321,7 @@ http://1.92.84.157:5171
 
 点击新建私有云默认配置立即添加即可
 
-![image-20260429141249986](C:\Users\18380\AppData\Roaming\Typora\typora-user-images\image-20260429141249986.png)
+![image-20260429141249986](.\images\16.png)
 
 ### 问题2：需要切换高版本JDK
 
